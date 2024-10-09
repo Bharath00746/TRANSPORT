@@ -5,187 +5,339 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STL - CHENNAI</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
- </head>
+    <style>
+        body {
+            background-color: #e6f3ff;
+            font-size: 14px;
+        }
+        .main-content {
+            margin-left: 50px;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        .section-header {
+            background-color: #4267B2;
+            color: white;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .form-control, .form-select {
+            border-radius: 4px;
+            font-size: 14px;
+            padding: 0.25rem 0.5rem;
+            height: auto;
+        }
+        .btn-primary {
+            background-color: #4267B2;
+            border-color: #4267B2;
+        }
+        .btn-secondary {
+            background-color: #f0f2f5;
+            border-color: #f0f2f5;
+            color: #4267B2;
+        }
+        .table th {
+            background-color: #4267B2;
+            color: white;
+            font-size: 12px;
+            padding: 0.5rem;
+        }
+        .table td {
+            font-size: 12px;
+            padding: 0.5rem;
+        }
+        .form-label {
+            margin-bottom: 0.25rem;
+            font-size: 14px;
+        }
+        .mb-2 {
+            margin-bottom: 0.5rem !important;
+        }
+    </style>
+</head>
 <body>
-    <div class="container-fluid">
-        <div class="row">
-   <div class="form-container">
-                    <form>
-                        <div class="row mb-3">
-                            <div class="col-md-3">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="llrType" id="manualLLR" checked>
-                                    <label class="form-check-label" for="manualLLR">Manual LLR</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="llrType" id="autoLLR">
-                                    <label class="form-check-label" for="autoLLR">Auto LLR</label>
-                                </div>
+    
+
+            <div class="form-container">
+                <form>
+                    <div class="row mb-3">
+                        <div class="col-md-2">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="llrType" id="manualLLR" checked>
+                                <label class="form-check-label" for="manualLLR">Manual LLR</label>
                             </div>
-                            <div class="col-md-2">
-                                <input type="text" class="form-control" placeholder="LLR No">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="llrType" id="autoLLR">
+                                <label class="form-check-label" for="autoLLR">Auto LLR</label>
                             </div>
-                            <div class="col-md-2">
-                                <input type="date" class="form-control" value="2024-10-07">
-                            </div>
-                            <div class="col-md-2">
+                        </div>
+                        <div class="col-md-1">
+                            <label class="form-label">LLR No*</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="col-md-1">
+                            <label class="form-label">Date*</label>
+                            <input type="date" class="form-control" value="2024-10-07">
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Veh Model*</label>
+                            <select class="form-select">
+                                <option selected></option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Vehicle No*</label>
+                            <select class="form-select">
+                                <option selected></option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Bill To*</label>
+                            <select class="form-select">
+                                <option selected></option>
+                            </select>
+                        </div>
+                        <div class="col-md-1">
+                            <label class="form-label">From*</label>
+                            <select class="form-select">
+                                <option selected></option>
+                            </select>
+                        </div>
+                        <div class="col-md-1">
+                            <label class="form-label">To*</label>
+                            <select class="form-select">
+                                <option selected></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="section-header">CONSIGNOR DETAILS</div>
+                            <div class="mb-2">
+                                <label class="form-label">Consignor*</label>
                                 <select class="form-select">
-                                    <option selected>Veh Model</option>
+                                    <option selected></option>
                                 </select>
                             </div>
-                            <div class="col-md-3">
+                            <div class="mb-2">
+                                <label class="form-label">BR.Name*</label>
                                 <select class="form-select">
-                                    <option selected>Vehicle No</option>
+                                    <option selected></option>
                                 </select>
                             </div>
+                            <div class="mb-2">
+                                <label class="form-label">Address</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">City*</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Pin Code</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">GST No</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Mob. No</label>
+                                <input type="text" class="form-control">
+                            </div>
                         </div>
+                        <div class="col-md-3">
+                            <div class="section-header">CONSIGNEE DETAILS</div>
+                            <div class="mb-2">
+                                <label class="form-label">Consignee*</label>
+                                <select class="form-select">
+                                    <option selected></option>
+                                </select>
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">BR Name*</label>
+                                <select class="form-select">
+                                    <option selected></option>
+                                </select>
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Address</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">City*</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Pin code</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">GST No</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Mob. no</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="section-header">BUYER DETAILS</div>
+                            <div class="mb-2">
+                                <label class="form-label">Buyer*</label>
+                                <select class="form-select">
+                                    <option selected></option>
+                                </select>
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">BR Name*</label>
+                                <select class="form-select">
+                                    <option selected></option>
+                                </select>
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Address</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">City*</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Pin code</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">GST No</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Mob. no</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="section-header">VEHICLE DETAILS</div>
+                            <div class="mb-2">
+                                <label class="form-label">Owner Name*</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Driver License*</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Owner Id*</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Driver No 1*</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Owner No*</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Driver No 2</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Remarks</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Internal Remarks</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
 
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="section-header">CONSIGNOR DETAILS</div>
-                                <select class="form-select mb-2">
-                                    <option selected>Consignor</option>
-                                </select>
-                                <select class="form-select mb-2">
-                                    <option selected>BR.Name</option>
-                                </select>
-                                <input type="text" class="form-control mb-2" placeholder="Address">
-                                <input type="text" class="form-control mb-2" placeholder="City">
-                                <input type="text" class="form-control mb-2" placeholder="Pin Code">
-                                <input type="text" class="form-control mb-2" placeholder="GST No">
-                                <input type="text" class="form-control mb-2" placeholder="Mob. No">
-                            </div>
-                            <div class="col-md-4">
-                                <div class="section-header">CONSIGNEE DETAILS</div>
-                                <select class="form-select mb-2">
-                                    <option selected>Consignee</option>
-                                </select>
-                                <select class="form-select mb-2">
-                                    <option selected>BR Name</option>
-                                </select>
-                                <input type="text" class="form-control mb-2" placeholder="Address">
-                                <input type="text" class="form-control mb-2" placeholder="City">
-                                <input type="text" class="form-control mb-2" placeholder="Pin code">
-                                <input type="text" class="form-control mb-2" placeholder="GST No">
-                                <input type="text" class="form-control mb-2" placeholder="Mob. no">
-                            </div>
-                            <div class="col-md-4">
-                                <div class="section-header">BUYER DETAILS</div>
-                                <select class="form-select mb-2">
-                                    <option selected>Buyer</option>
-                                </select>
-                                <select class="form-select mb-2">
-                                    <option selected>BR Name</option>
-                                </select>
-                                <input type="text" class="form-control mb-2" placeholder="Address">
-                                <input type="text" class="form-control mb-2" placeholder="City">
-                                <input type="text" class="form-control mb-2" placeholder="Pin code">
-                                <input type="text" class="form-control mb-2" placeholder="GST No">
-                                <input type="text" class="form-control mb-2" placeholder="Mob. no">
-                            </div>
+                    <div class="row mt-3">
+                        <div class="col-md-1">
+                            <label class="form-label">Qty*</label>
+                            <input type="text" class="form-control mb-2">
                         </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Act wt(MT)*</label>
+                            <input type="text" class="form-control mb-2">
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Char Wgt(MT)</label>
+                            <input type="text" class="form-control mb-2" value="0">
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Description</label>
+                            <input type="text" class="form-control mb-2">
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Accessories</label>
+                            <input type="text" class="form-control mb-2">
+                        </div>
+                        <div class="col-md-1">
+                            <label class="form-label">Packing</label>
+                            <select class="form-select mb-2">
+                                <option selected>-select-</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Dly Mode</label>
+                            <select class="form-select mb-2">
+                                <option selected>GO DOWN</option>
+                            </select>
+                        </div>
+                    </div>
 
-                        <div class="row mt-3">
-                            <div class="col-md-12">
-                                <div class="section-header">VEHICLE DETAILS</div>
-                            </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label class="form-label">Dimension</label>
+                            <input type="text" class="form-control mb-2" value="0">
                         </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <input type="text" class="form-control mb-2" placeholder="Owner Name">
-                                <input type="text" class="form-control mb-2" placeholder="Driver License">
-                                <input type="text" class="form-control mb-2" placeholder="Driver No 1">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control mb-2" placeholder="Owner Id">
-                                <input type="text" class="form-control mb-2" placeholder="Owner No">
-                                <input type="text" class="form-control mb-2" placeholder="Driver No 2">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control mb-2" placeholder="Remarks">
-                                <input type="text" class="form-control mb-2" placeholder="Internal Remarks">
-                            </div>
+                        <div class="col-md-1">
+                            <button type="button" class="btn btn-primary btn-sm mt-4">Invoice</button>
                         </div>
+                        <div class="col-md-9 text-end">
+                            <button type="button" class="btn btn-primary btn-sm mt-4">Save & Update</button>
+                            <button type="button" class="btn btn-secondary btn-sm mt-4">Clear</button>
+                            <button type="button" class="btn btn-primary btn-sm mt-4">Print</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
 
-                        <div class="row mt-3">
-                            <div class="col-md-2">
-                                <input type="text" class="form-control mb-2" placeholder="Qty">
-                                <input type="text" class="form-control mb-2" placeholder="Act wt(MT)">
-                            </div>
-                            <div class="col-md-2">
-                                <input type="text" class="form-control mb-2" placeholder="Char Wgt(MT)">
-                                <select class="form-select mb-2">
-                                    <option selected>Packing</option>
-                                </select>
-                            </div>
-                            <div class="col-md-2">
-                                <input type="text" class="form-control mb-2" placeholder="Accessories">
-                                <select class="form-select mb-2">
-                                    <option selected>GO DOWN</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4">
-                                <input type="text" class="form-control mb-2" placeholder="Description">
-                                <input type="text" class="form-control mb-2" placeholder="Dimension">
-                            </div>
-                            <div class="col-md-2">
-                                <button type="button" class="btn btn-primary w-100 mb-2">Invoice</button>
-                            </div>
-                        </div>
-
-                        <div class="row mt-3">
-                            <div class="col-md-12 d-flex justify-content-center">
-                                <button type="button" class="btn btn-primary me-2">Save & Update</button>
-                                <button type="button" class="btn btn-secondary me-2">Clear</button>
-                                <button type="button" class="btn btn-info">Print</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="table-container">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>LLR_no</th>
-                                <th>SI_No</th>
-                                <th>Combined</th>
-                                <th>LLR_date</th>
-                                <th>From</th>
-                                <th>Des_Location</th>
-                                <th>Client</th>
-                                <th>Service</th>
-                                <th>Vendor</th>
-                                <th>Vehicle_Number</th>
-                                <th>Driver No</th>
-                                <th>Add</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>12240</td>
-                                <td>12240</td>
-                                <td>02-09-2024</td>
-                                <td>CHENNAI</td>
-                                <td>BRAHAMANAGUDEM</td>
-                                <td>NADI AIRTECHNICS PVT LTD.</td>
-                                <td>14 FEET</td>
-                                <td>DRC</td>
-                                <td>TN 01Y 4844</td>
-                                <td>7667716164</td>
-                                <td><button class="btn btn-sm btn-primary">Edit</button></td>
-                            </tr>
-                            <!-- Add more rows as needed -->
-                        </tbody>
-                    </table>
-                </div>
-            </main>
-        </div>
+            <div class="table-responsive mt-4">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>LLR_no</th>
+                            <th>SI_No</th>
+                            <th>Combined</th>
+                            <th>LLR_date</th>
+                            <th>From</th>
+                            <th>Des_Location</th>
+                            <th>Client</th>
+                            <th>Service</th>
+                            <th>Vendor</th>
+                            <th>Vehicle_Number</th>
+                            <th>Driver No</th>
+                            <th>Add</th>
+                        </tr> 
+                    </thead>
+                </table>
+            </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+            
 
 
                     
