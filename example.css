@@ -1,37 +1,35 @@
- body {
-            background-color: #f0f0f0;
-        }
-        .navbar {
-            background-color: #3b5998;
-        }
-        .navbar-brand {
-            color: white !important;
-        }
-        .form-container {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            padding: 20px;
-            margin-top: 20px;
-        }
-        .section-header {
-            background-color: #4267B2;
-            color: white;
-            padding: 5px 10px;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        .form-control, .form-select {
-            border-radius: 0;
-        }
-        .btn {
-            border-radius: 0;
-        }
-        .table-container {
-            margin-top: 20px;
-        }
-        .table th {
-            background-color: #4267B2;
-            color: white;
-        }
+body {
+  background-color: #f0f0f0;
+}
 
+.form-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+.section-header {
+  background-color: #4267B2;
+  color: white;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.form-control, .form-select {
+  border-radius: 0;
+}
+.btn {
+  border-radius: 0;
+}
+.table-container {
+  margin-top: 20px;
+}
+.table th {
+  background-color: #4267B2;
+  color: white;
+}
+
+.star{
+  color: red;
+}
