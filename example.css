@@ -33,3 +33,13 @@ body {
 .star{
   color: red;
 }
+
+/*   */
+.jk-height{
+  height: auto;
+}
+.jkp div{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
